@@ -10,18 +10,18 @@ const JWT_SECRET = 'your_jwt_secret_key';
 
 router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 router.get('/google/callback',
-  passport.authenticate('google', { successRedirect: 'https://taskflowapplication1.netlify.app/dashboard', failureRedirect: '/login/failed' })
+  passport.authenticate('google', { successRedirect: 'https://taskflowapplication2.netlify.app/dashboard', failureRedirect: '/login/failed' })
 );
 
 
 router.get('/github', passport.authenticate('github', { scope: ['user:email'] }));
 router.get('/github/callback',
-  passport.authenticate('github', { successRedirect: 'https://taskflowapplication1.netlify.app/dashboard', failureRedirect: '/login/failed' })
+  passport.authenticate('github', { successRedirect: 'https://taskflowapplication2.netlify.app/dashboard', failureRedirect: '/login/failed' })
 );
 
 router.get('/facebook', passport.authenticate('facebook', { scope: ['email'] }));
 router.get('/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: 'https://taskflowapplication1.netlify.app/dashboard', failureRedirect: '/login/failed' })
+  passport.authenticate('facebook', { successRedirect: 'https://taskflowapplication2.netlify.app/dashboard', failureRedirect: '/login/failed' })
 );
 
 
